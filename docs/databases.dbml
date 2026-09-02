@@ -1,0 +1,70 @@
+Table dim_estabelecimento {
+    id_estabelecimento integer [pk, increment]
+    cnes varchar(7) [unique, not null]
+    nome_estabelecimento varchar(100)
+    razao_social varchar(100)
+    tp_gestao char(1)
+    co_tipo_unidade integer
+    ds_tipo_unidade varchar(100)
+    natureza_juridica integer
+    desc_natureza_juridica varchar(150)
+    created_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table dim_localidade {
+    id_localidade integer [pk, increment]
+    co_ibge varchar(6) [unique, not null]
+    regiao varchar(30)
+    uf char(2)
+    municipio varchar(50)
+    created_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table dim_tempo {
+    id_tempo integer [pk, increment]
+    comp integer [unique, not null]
+    ano integer
+    mes integer
+    created_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table fact_capacidade_hospitalar {
+    id_tempo integer
+    id_estabelecimento integer
+    id_localidade integer
+    leitos_existentes integer
+    leitos_sus integer
+    leitos_nao_sus_calc integer
+    uti_total_exist integer
+    uti_total_sus integer
+    uti_total_nao_sus_calc integer
+    uti_adulto_exist integer
+    uti_adulto_sus integer
+    uti_adulto_nao_sus_calc integer
+    uti_pediatrico_exist integer
+    uti_pediatrico_sus integer
+    uti_pediatrico_nao_sus_calc integer
+    uti_neonatal_exist integer
+    uti_neonatal_sus integer
+    uti_neonatal_nao_sus_calc integer
+    uti_queimado_exist integer
+    uti_queimado_sus integer
+    uti_queimado_nao_sus_calc integer
+    uti_coronariana_exist integer
+    uti_coronariana_sus integer
+    uti_coronariana_nao_sus_calc integer
+    created_at timestamp [default: `CURRENT_TIMESTAMP`]
+    
+    indexes {
+        (id_estabelecimento, id_tempo) [unique]
+    }    
+}
+
+Ref: fact_capacidade_hospitalar.id_tempo
+    > dim_tempo.id_tempo
+
+Ref: fact_capacidade_hospitalar.id_estabelecimento
+    > dim_estabelecimento.id_estabelecimento
+
+Ref: fact_capacidade_hospitalar.id_localidade
+    > dim_localidade.id_localidade

@@ -1,0 +1,40 @@
+{
+  "version": "3.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "currentViewName": null,
+  "defaultView": {
+    "detailLevel": "All",
+    "relationshipMode": "All",
+    "tablePositions": [
+      {
+        "name": "dim_estabelecimento",
+        "schemaName": "public",
+        "x": 12,
+        "y": 12
+      },
+      {
+        "name": "dim_localidade",
+        "schemaName": "public",
+        "x": 12,
+        "y": 410
+      },
+      {
+        "name": "dim_tempo",
+        "schemaName": "public",
+        "x": 201.8143907584357,
+        "y": -220.3156513827345
+      },
+      {
+        "name": "fact_capacidade_hospitalar",
+        "schemaName": "public",
+        "x": 604.6787109375,
+        "y": 12
+      }
+    ],
+    "tableGroupCollapseStates": [],
+    "stickyNoteLayouts": [],
+    "referencePaths": []
+  },
+  "views": {}
+}

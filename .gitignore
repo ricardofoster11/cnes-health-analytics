@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Notes
+notes.md
+
+# Raw data
+data/raw/estabelecimentos/*
+!data/raw/estabelecimentos/.gitkeep
+
+data/raw/leitos/*
+!data/raw/leitos/.gitkeep
