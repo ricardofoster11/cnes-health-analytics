@@ -46,6 +46,7 @@ def create_table_localidade() -> None:
         regiao VARCHAR(30),
         uf CHAR(2),
         municipio VARCHAR(50),
+        estado VARCHAR(50),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     """
