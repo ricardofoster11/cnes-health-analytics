@@ -34,9 +34,9 @@ O dashboard permite selecionar a **competência (mês/ano)**, atualizando os ind
 Os principais indicadores apresentados no Power BI foram validados
 diretamente no PostgreSQL através de consultas SQL.
 
-As consultas utilizadas para conferência estão disponíveis em:
+As consultas utilizadas para conferência da aba "Visão Geral" estão disponíveis em:
 
-`sql/validation_queries.sql`
+`sql/validation_queries_visao_geral.sql`
 
 ## Arquitetura do Projeto
 

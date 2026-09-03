@@ -100,9 +100,10 @@ def load_dim_estabelecimento(df: pd.DataFrame) -> None:
     finally:
         engine.dispose()
 
-########################################
-### Calculo Data Fact + Dados Tabela ###
-########################################
+
+"""
+Calculo Data Fact + Dados Tabela
+"""
 
 
 def get_dim_tempo_ids() -> pd.DataFrame:

@@ -25,7 +25,7 @@ def create_table_estabelecimento() -> None:
         natureza_juridica INTEGER,
         desc_natureza_juridica VARCHAR(150),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );    
+    );
     """
 
     try:
