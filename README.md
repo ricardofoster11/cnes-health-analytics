@@ -29,6 +29,15 @@ Entre os principais indicadores apresentados estão:
 
 O dashboard permite selecionar a **competência (mês/ano)**, atualizando os indicadores e visualizações de forma integrada.
 
+### Validação dos indicadores
+
+Os principais indicadores apresentados no Power BI foram validados
+diretamente no PostgreSQL através de consultas SQL.
+
+As consultas utilizadas para conferência estão disponíveis em:
+
+`sql/validation_queries.sql`
+
 ## Arquitetura do Projeto
 
 ```text
