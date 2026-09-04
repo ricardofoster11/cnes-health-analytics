@@ -92,6 +92,13 @@ def transform_leitos(df: pd.DataFrame) -> dict[str, pd.DataFrame]:
 
     dim_localidade["estado"] = dim_localidade["uf"].map(estados)
 
+    dim_localidade["localizacao"] = (
+        dim_localidade["municipio"]
+        + ", "
+        + dim_localidade["estado"]
+        + ", Brasil"
+    )
+
     dim_localidade = dim_localidade.sort_values("co_ibge")
 
     logger.info("Transform dim_localidade concluido")
