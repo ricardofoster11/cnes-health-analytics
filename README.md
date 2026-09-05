@@ -27,6 +27,20 @@ Entre os principais indicadores apresentados estão:
   - Queimados;
   - Coronariana.
 
+### Rede SUS
+
+A segunda página do dashboard aprofunda a análise da capacidade de UTI destinada ao SUS.
+
+![CNES — Rede SUS](docs/images/cnes-rede-sus.png)
+
+Entre os principais indicadores apresentados estão:
+
+- quantidade total de leitos UTI SUS;
+- distribuição por tipo de UTI;
+- capacidade de UTI SUS por estado;
+- participação de cada tipo no total de UTI SUS;
+- comparação entre UTI SUS e não SUS.
+
 O dashboard permite selecionar a **competência (mês/ano)**, atualizando os indicadores e visualizações de forma integrada.
 
 ### Validação dos indicadores
@@ -37,6 +51,10 @@ diretamente no PostgreSQL através de consultas SQL.
 As consultas utilizadas para conferência da aba "Visão Geral" estão disponíveis em:
 
 `sql/validation_queries_visao_geral.sql`
+
+As consultas utilizadas para conferência da aba "Visão SUS" estão disponíveis em:
+
+`sql/validation_queries_sus.sql`
 
 ## Arquitetura do Projeto
 
